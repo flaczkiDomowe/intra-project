@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteBase /intra-project
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index.php)
+RewriteRule .* src/public/index.php/$0 [L]
